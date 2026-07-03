@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Estándares de Codificación</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== ENCABEZADO ====== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <div class="header__brand">
+        <img src="logo.png" alt="Logo" class="header_logo">
+      </div>
+
+      <button class="header__menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="header__nav" id="nav">
+        <ul class="header__nav-list">
+          <li><a href="#inicio" class="header__nav-link">Inicio</a></li>
+          <li><a href="#clases" class="header__nav-link">Clases</a></li>
+          <li><a href="#ejemplos" class="header__nav-link">Ejemplos</a></li>
+          <li><a href="#recursos" class="header__nav-link">Recursos</a></li>
+          <li><a href="#contacto" class="header__nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">
+        <span class="theme-btn__icon" id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====== INICIO ====== -->
+  <section class="hero" id="inicio">
+    <div class="hero__content">
+      <h2 class="hero__title">Aprende a escribir código limpio y profesional</h2>
+      <p class="hero__text">
+        Domina las buenas prácticas, convenciones y estándares que todo desarrollador
+        debe conocer para crear software legible, mantenible y de calidad.
+      </p>
+      <div class="hero__actions">
+        <a href="#clases" class="btn btn--primary">Ver clases</a>
+        <a href="#recursos" class="btn btn--outline">Recursos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CLASES ====== -->
+  <section class="clases section" id="clases">
+    <div class="container">
+      <h2 class="section__title">Clases del curso</h2>
+      <p class="section__desc">diesiceis semanas para dominar los estándares de codificación.</p>
+
+      <div class="clases__grid" id="clasesGrid">
+        <!-- Las tarjetas se generan con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EJEMPLOS ====== -->
+  <section class="ejemplos section" id="ejemplos">
+    <div class="container">
+      <h2 class="section__title">Ejemplos de código</h2>
+      <p class="section__desc">Fragmentos sencillos con buenas prácticas.</p>
+
+      <div class="ejemplos__grid">
+        <div class="code-card">
+          <div class="code-card__header">
+            <span class="code-card__dot"></span>
+            <span class="code-card__dot"></span>
+            <span class="code-card__dot"></span>
+            <span class="code-card__lang">HTML</span>
+          </div>
+          <pre class="code-card__body"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Ejemplo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Usar etiquetas semánticas --&gt;
+  &lt;header&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="code-card">
+          <div class="code-card__header">
+            <span class="code-card__dot"></span>
+            <span class="code-card__dot"></span>
+            <span class="code-card__dot"></span>
+            <span class="code-card__lang">CSS</span>
+          </div>
+          <pre class="code-card__body"><code>/* Clases descriptivas y ordenadas */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #1e1e2e;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Variables para consistencia */
+:root {
+  --primary: #0ea5e9;
+  --dark: #0f172a;
+}</code></pre>
+        </div>
+
+        <div class="code-card">
+          <div class="code-card__header">
+            <span class="code-card__dot"></span>
+            <span class="code-card__dot"></span>
+            <span class="code-card__dot"></span>
+            <span class="code-card__lang">JavaScript</span>
+          </div>
+          <pre class="code-card__body"><code>// Nombres descriptivos y constantes
+const MAX_USERS = 100;
+let activeUsers = 0;
+
+function getActiveUsers(users) {
+  return users.filter(user => user.active);
+}
+
+// Evitar efectos secundarios
+function formatDate(date) {
+  const d = new Date(date);
+  return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== RECURSOS ====== -->
+  <section class="recursos section" id="recursos">
+    <div class="container">
+      <h2 class="section__title">Recursos de estudio</h2>
+      <p class="section__desc">Material complementario para el curso.</p>
+
+      <div class="recursos__grid">
+        <div class="recurso-card">
+          <h3 class="recurso-card__title">PDFs</h3>
+           <p class="recurso-card__text">Guías descargables con resúmenes de cada semana.</p>
+           <a href="#" class="recurso-card__link">Descargar</a>
+        </div>
+        <div class="recurso-card">
+          <h3 class="recurso-card__title">Video</h3>
+           <p class="recurso-card__text">Tutoriales paso a paso explicando cada tema.</p>
+           <a href="#" class="recurso-card__link">Ver lista</a>
+        </div>
+        <div class="recurso-card">
+          <h3 class="recurso-card__title">Guiás de Estudio</h3>
+           <p class="recurso-card__text">Material estructurado para repasar conceptos clave.</p>
+           <a href="#" class="recurso-card__link">Leer guia</a>
+        </div>
+        <div class="recurso-card">
+          <h3 class="recurso-card__title">Enlaces Útiles</h3>
+           <p class="recurso-card__text">Documentación oficial y recursos externos recomendados.</p>
+           <a href="#" class="recurso-card__link">Explorar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACTO ====== -->
+  <section class="contacto section" id="contacto">
+    <div class="container">
+      <h2 class="section__title">Contacto</h2>
+      <p class="section__desc">¿Tienes dudas o sugerencias? Escríbenos.</p>
+
+      <form class="form" id="contactForm">
+        <div class="form__group">
+          <label for="nombre" class="form__label">Nombre</label>
+          <input type="text" id="nombre" class="form__input" placeholder="Tu nombre" required>
+          <span class="form__error" id="nombreError">El nombre debe tener al menos 3 caracteres.</span>
+        </div>
+        <div class="form__group">
+          <label for="correo" class="form__label">Correo</label>
+          <input type="email" id="correo" class="form__input" placeholder="tu@correo.com" required>
+          <span class="form__error" id="correoError">Ingresa un correo válido.</span>
+        </div>
+        <div class="form__group">
+          <label for="mensaje" class="form__label">Mensaje</label>
+          <textarea id="mensaje" class="form__textarea" placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+          <span class="form__error" id="mensajeError">El mensaje debe tener al menos 10 caracteres.</span>
+        </div>
+        <button type="submit" class="btn btn--primary form__btn">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====== PIE DE PÁGINA ====== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        Curso de Estándares de Codificación &mdash; 
+        Jesús Amadeo Paucar Mollehuara
+      </p>
+      <p class="footer__year">&copy; <span id="year"></span> &mdash; Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ====== BOTÓN VOLVER ARRIBA ====== -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">&#8593;</button>
+
+  <!-- ====== TOAST (mensaje emergente) ====== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
